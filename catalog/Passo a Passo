@@ -1,0 +1,895 @@
+C:\Users\DanielCarol  (projeto@1.0.0)
+λ Mkdir drf-tutorial
+
+C:\Users\DanielCarol  (projeto@1.0.0)
+λ cd drf-tutorial
+
+C:\Users\DanielCarol\drf-tutorial
+λ virtualenv drf-tutorial
+New python executable in C:\Users\DanielCarol\drf-tutorial\drf-tutorial\Scripts\python.exe
+Installing setuptools, pip, wheel...done.
+
+C:\Users\DanielCarol\drf-tutorial
+λ .\drf-tutorial\Scripts\activate
+
+C:\Users\DanielCarol\drf-tutorial
+(drf-tutorial) λ django-admin.py startproject drftutorial
+
+C:\Users\DanielCarol\drf-tutorial
+(drf-tutorial) λ cd drftutorial
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ django-admin.py startapp catalog
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py makemigrations
+Traceback (most recent call last):
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 307, in execute
+    settings.INSTALLED_APPS
+  File "C:\Python27\lib\site-packages\django\conf\__init__.py", line 56, in __getattr__
+    self._setup(name)
+  File "C:\Python27\lib\site-packages\django\conf\__init__.py", line 41, in _setup
+    self._wrapped = Settings(settings_module)
+  File "C:\Python27\lib\site-packages\django\conf\__init__.py", line 110, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\drftutorial\settings.py", line 40
+SyntaxError: Non-ASCII character '\xc3' in file C:\Users\DanielCarol\drf-tutorial\drftutorial\drftutorial\settings.py on line 40, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py makemigrations
+Traceback (most recent call last):
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 337, in execute
+    django.setup()
+  File "C:\Python27\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 85, in populate
+    app_config = AppConfig.create(entry)
+  File "C:\Python27\lib\site-packages\django\apps\config.py", line 94, in create
+    module = import_module(entry)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named Catalogo
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py makemigrations
+Traceback (most recent call last):
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 337, in execute
+    django.setup()
+  File "C:\Python27\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "C:\Python27\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\catalog\models.py", line 6
+    Classe  Produto ( modelos . Modelo ):
+                  ^
+SyntaxError: invalid syntax
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py makemigrations
+Traceback (most recent call last):
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 337, in execute
+    django.setup()
+  File "C:\Python27\lib\site-packages\django\__init__.py", line 27, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Python27\lib\site-packages\django\apps\registry.py", line 108, in populate
+    app_config.import_models()
+  File "C:\Python27\lib\site-packages\django\apps\config.py", line 202, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\catalog\models.py", line 6
+    Classe Produto ( modelos.Modelo ):
+                 ^
+SyntaxError: invalid syntax
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py makemigrations
+Migrations for 'catalog':
+  catalog\migrations\0001_initial.py
+    - Create model Product
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, catalog, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying catalog.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ pip install httpie
+Collecting httpie
+  Downloading httpie-0.9.9-py2.py3-none-any.whl (74kB)
+    100% |################################| 81kB 149kB/s
+Collecting Pygments>=2.1.3 (from httpie)
+  Downloading Pygments-2.2.0-py2.py3-none-any.whl (841kB)
+    100% |################################| 849kB 100kB/s
+Collecting colorama>=0.2.4; sys_platform == "win32" (from httpie)
+  Downloading colorama-0.3.9-py2.py3-none-any.whl
+Collecting requests>=2.11.0 (from httpie)
+  Downloading requests-2.18.3-py2.py3-none-any.whl (88kB)
+    100% |################################| 92kB 44kB/s
+Collecting chardet<3.1.0,>=3.0.2 (from requests>=2.11.0->httpie)
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)
+    100% |################################| 143kB 56kB/s
+Collecting certifi>=2017.4.17 (from requests>=2.11.0->httpie)
+  Downloading certifi-2017.7.27.1-py2.py3-none-any.whl (349kB)
+    100% |################################| 358kB 53kB/s
+Collecting idna<2.6,>=2.5 (from requests>=2.11.0->httpie)
+  Downloading idna-2.5-py2.py3-none-any.whl (55kB)
+    100% |################################| 61kB 66kB/s
+Collecting urllib3<1.23,>=1.21.1 (from requests>=2.11.0->httpie)
+  Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)
+    100% |################################| 133kB 50kB/s
+Installing collected packages: Pygments, colorama, chardet, certifi, idna, urllib3, requests, httpie
+Successfully installed Pygments-2.2.0 certifi-2017.7.27.1 chardet-3.0.4 colorama-0.3.9 httpie-0.9.9 idna-2.5 requests-2.18.3 urllib3-1.22
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ http http://127.0.0.1:8000/products/
+
+http: error: ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /products/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x043459B0>: Failed to establish a new connection: [Errno 10061] Nenhuma conex\xe3o p\xf4de ser feita porque a m\xe1quina de destino as recusou ativamente',)) while doing GET request to URL: http://127.0.0.1:8000/products/
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py makemigrations --empty catalog
+Traceback (most recent call last):
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 355, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 283, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 327, in execute
+    self.check()
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Python27\lib\site-packages\django\core\checks\registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Python27\lib\site-packages\django\core\checks\urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Python27\lib\site-packages\django\core\checks\urls.py", line 26, in check_resolver
+    return check_method()
+  File "C:\Python27\lib\site-packages\django\urls\resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Python27\lib\site-packages\django\urls\resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Python27\lib\site-packages\django\urls\resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\drftutorial\urls.py", line 21, in <module>
+    url(r'^', include('catalog.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\catalog\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\catalog\views.py", line 16, in <module>
+    class ProductList(generics.ListAPIView):
+NameError: name 'generics' is not defined
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ ./manage.py makemigrations --empty catalog
+'.' não é reconhecido como um comando interno
+ou externo, um programa operável ou um arquivo em lotes.
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py makemigrations --empty catalog
+Traceback (most recent call last):
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 355, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 283, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 327, in execute
+    self.check()
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 359, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 346, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Python27\lib\site-packages\django\core\checks\registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Python27\lib\site-packages\django\core\checks\urls.py", line 16, in check_url_config
+    return check_resolver(resolver)
+  File "C:\Python27\lib\site-packages\django\core\checks\urls.py", line 26, in check_resolver
+    return check_method()
+  File "C:\Python27\lib\site-packages\django\urls\resolvers.py", line 254, in check
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Python27\lib\site-packages\django\urls\resolvers.py", line 405, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Python27\lib\site-packages\django\urls\resolvers.py", line 398, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\drftutorial\urls.py", line 21, in <module>
+    url(r'^', include('catalog.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 50, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\catalog\urls.py", line 2, in <module>
+    from . import views
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\catalog\views.py", line 16, in <module>
+    class ProductList(generics.ListAPIView):
+NameError: name 'generics' is not defined
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py makemigrations --empty catalog
+Migrations for 'catalog':
+  catalog\migrations\0002_auto_20170807_1620.py
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py migrate
+Traceback (most recent call last):
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 355, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 283, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Python27\lib\site-packages\django\core\management\base.py", line 330, in execute
+    output = self.handle(*args, **options)
+  File "C:\Python27\lib\site-packages\django\core\management\commands\migrate.py", line 83, in handle
+    executor = MigrationExecutor(connection, self.migration_progress_callback)
+  File "C:\Python27\lib\site-packages\django\db\migrations\executor.py", line 20, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "C:\Python27\lib\site-packages\django\db\migrations\loader.py", line 52, in __init__
+    self.build_graph()
+  File "C:\Python27\lib\site-packages\django\db\migrations\loader.py", line 203, in build_graph
+    self.load_disk()
+  File "C:\Python27\lib\site-packages\django\db\migrations\loader.py", line 114, in load_disk
+    migration_module = import_module("%s.%s" % (module_name, migration_name))
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\catalog\migrations\0002_auto_20170807_1620.py", line 8
+    from __future__ import unicode_literals
+SyntaxError: from __future__ imports must occur at the beginning of the file
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, catalog, contenttypes, sessions
+Running migrations:
+  Applying catalog.0002_auto_20170807_1620... OK
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ python manage.py runserver
+Traceback (most recent call last):
+  File "manage.py", line 17, in <module>
+    "Couldn't import Django. Are you sure it's installed and "
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 16:42:09
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[07/Aug/2017 17:02:57] "GET / HTTP/1.1" 404 2075
+Not Found: /favicon.ico
+[07/Aug/2017 17:02:58] "GET /favicon.ico HTTP/1.1" 404 2126
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Python27\lib\site-packages\rest_framework\renderers.py", line 702, in render
+    template = loader.get_template(self.template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: rest_framework/api.html
+[07/Aug/2017 17:03:36] "GET /products/ HTTP/1.1" 500 87702
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Python27\lib\site-packages\rest_framework\renderers.py", line 702, in render
+    template = loader.get_template(self.template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: rest_framework/api.html
+[07/Aug/2017 17:03:40] "GET /products/ HTTP/1.1" 500 87837
+Internal Server Error: /products/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 215, in _get_response
+    response = response.render()
+  File "C:\Python27\lib\site-packages\django\template\response.py", line 107, in render
+    self.content = self.rendered_content
+  File "C:\Python27\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Python27\lib\site-packages\rest_framework\renderers.py", line 702, in render
+    template = loader.get_template(self.template)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: rest_framework/api.html
+[07/Aug/2017 17:03:42] "GET /products/ HTTP/1.1" 500 87837
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 17:11:07
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Aug/2017 17:14:06] "GET /products/ HTTP/1.1" 200 6222
+[07/Aug/2017 17:14:08] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[07/Aug/2017 17:14:08] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[07/Aug/2017 17:14:09] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+[07/Aug/2017 17:14:09] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1132
+[07/Aug/2017 17:14:09] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 2876
+[07/Aug/2017 17:14:09] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[07/Aug/2017 17:14:09] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+[07/Aug/2017 17:14:09] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[07/Aug/2017 17:14:10] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+[07/Aug/2017 17:14:10] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+[07/Aug/2017 17:14:10] "GET /static/rest_framework/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 17:14:41
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Aug/2017 17:14:45] "GET /products/?format=json HTTP/1.1" 200 596
+[07/Aug/2017 17:14:55] "OPTIONS /products/ HTTP/1.1" 200 5190
+[07/Aug/2017 17:14:58] "OPTIONS /products/ HTTP/1.1" 200 5190
+[07/Aug/2017 17:14:59] "OPTIONS /products/ HTTP/1.1" 200 5190
+[07/Aug/2017 17:15:00] "OPTIONS /products/ HTTP/1.1" 200 5190
+[07/Aug/2017 17:15:00] "OPTIONS /products/ HTTP/1.1" 200 5190
+[07/Aug/2017 17:15:01] "GET /products/ HTTP/1.1" 200 6222
+[07/Aug/2017 17:23:09] "GET /products/?format=api HTTP/1.1" 200 6266
+[07/Aug/2017 17:23:13] "GET /products/?format=api HTTP/1.1" 200 6266
+[07/Aug/2017 17:34:46] "GET /products/?format=api HTTP/1.1" 200 6266
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 18:31:54
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Aug/2017 18:33:26] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2017 18:33:26] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1650
+[07/Aug/2017 18:33:27] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[07/Aug/2017 18:33:27] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[07/Aug/2017 18:33:27] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[07/Aug/2017 18:33:27] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[07/Aug/2017 18:33:27] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ http://127.0.0.1:8000/http://127.0.0.1:8000/http://127.0.0.1:8000/
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ python manage.py createsuperuser
+Traceback (most recent call last):
+  File "manage.py", line 17, in <module>
+    "Couldn't import Django. Are you sure it's installed and "
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ pip install django
+Collecting django
+  Using cached Django-1.11.4-py2.py3-none-any.whl
+Collecting pytz (from django)
+  Using cached pytz-2017.2-py2.py3-none-any.whl
+Installing collected packages: pytz, django
+Successfully installed django-1.11.4 pytz-2017.2
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ pip install djangorestframework
+Collecting djangorestframework
+  Using cached djangorestframework-3.6.3-py2.py3-none-any.whl
+Installing collected packages: djangorestframework
+Successfully installed djangorestframework-3.6.3
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ  python manage.py createsuperuser
+Username (leave blank to use 'danielcarol'):
+Email address: lufupinha101@hotmail.coTraceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Users\DanielCarol\drf-tutorial\drf-tutorial\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\DanielCarol\drf-tutorial\drf-tutorial\lib\site-packages\django\core\management\__init__.py", line 355, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\DanielCarol\drf-tutorial\drf-tutorial\lib\site-packages\django\core\management\base.py", line 296, in run_from_argv
+    connections.close_all()
+  File "C:\Users\DanielCarol\drf-tutorial\drf-tutorial\lib\site-packages\django\db\utils.py", line 234, in close_all
+    connection.close()
+  File "C:\Users\DanielCarol\drf-tutorial\drf-tutorial\lib\site-packages\django\db\backends\sqlite3\base.py", line 226, in close
+    BaseDatabaseWrapper.close(self)
+  File "C:\Users\DanielCarol\drf-tutorial\drf-tutorial\lib\site-packages\django\db\backends\base\base.py", line 292, in close
+    self._close()
+  File "C:\Users\DanielCarol\drf-tutorial\drf-tutorial\lib\site-packages\django\db\backends\base\base.py", line 246, in _close
+    return self.connection.close()
+KeyboardInterrupt
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ  python manage.py createsuperuser
+Username (leave blank to use 'danielcarol'): silas
+Email address:
+Password:
+Password (again):
+Superuser created successfully.
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 19:07:49
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /
+[07/Aug/2017 19:09:57] "GET / HTTP/1.1" 404 2075
+[07/Aug/2017 19:10:05] "GET /products/ HTTP/1.1" 200 6222
+[07/Aug/2017 19:10:16] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2017 19:10:16] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1650
+[07/Aug/2017 19:10:25] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[07/Aug/2017 19:10:25] "GET /admin/ HTTP/1.1" 200 3433
+[07/Aug/2017 19:10:26] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[07/Aug/2017 19:10:26] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[07/Aug/2017 19:10:26] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[07/Aug/2017 19:10:26] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[07/Aug/2017 19:10:30] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4805
+[07/Aug/2017 19:10:31] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[07/Aug/2017 19:10:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:10:31] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[07/Aug/2017 19:10:31] "GET /static/admin/js/core.js HTTP/1.1" 200 7976
+[07/Aug/2017 19:10:31] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8186
+[07/Aug/2017 19:10:31] "GET /static/admin/js/actions.js HTTP/1.1" 200 6501
+[07/Aug/2017 19:10:31] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6591
+[07/Aug/2017 19:10:31] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[07/Aug/2017 19:10:31] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[07/Aug/2017 19:10:31] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[07/Aug/2017 19:10:31] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[07/Aug/2017 19:10:31] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[07/Aug/2017 19:10:31] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[07/Aug/2017 19:11:19] "POST /admin/catalog/product/add/ HTTP/1.1" 302 0
+[07/Aug/2017 19:11:19] "GET /admin/catalog/product/ HTTP/1.1" 200 6234
+[07/Aug/2017 19:11:19] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:11:19] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[07/Aug/2017 19:11:19] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[07/Aug/2017 19:11:19] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[07/Aug/2017 19:11:31] "GET /admin/catalog/product/9/change/ HTTP/1.1" 200 5101
+[07/Aug/2017 19:11:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:11:36] "POST /admin/catalog/product/9/change/ HTTP/1.1" 302 0
+[07/Aug/2017 19:11:36] "GET /admin/catalog/product/ HTTP/1.1" 200 6236
+[07/Aug/2017 19:11:36] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:11:40] "GET /admin/catalog/product/8/change/ HTTP/1.1" 200 5092
+[07/Aug/2017 19:11:40] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:11:44] "POST /admin/catalog/product/8/change/ HTTP/1.1" 302 0
+[07/Aug/2017 19:11:44] "GET /admin/catalog/product/ HTTP/1.1" 200 6236
+[07/Aug/2017 19:11:45] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:11:56] "GET /admin/ HTTP/1.1" 200 4360
+[07/Aug/2017 19:12:06] "GET /admin/catalog/product/ HTTP/1.1" 200 6043
+[07/Aug/2017 19:12:06] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:12:12] "GET /admin/catalog/product/9/change/ HTTP/1.1" 200 5101
+[07/Aug/2017 19:12:12] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:12:16] "GET /admin/catalog/product/ HTTP/1.1" 200 6043
+[07/Aug/2017 19:12:27] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4805
+[07/Aug/2017 19:12:27] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:12:49] "POST /admin/catalog/product/add/ HTTP/1.1" 302 0
+[07/Aug/2017 19:12:49] "GET /admin/catalog/product/ HTTP/1.1" 200 6471
+[07/Aug/2017 19:12:49] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:12:51] "GET /admin/catalog/product/10/change/ HTTP/1.1" 200 5068
+[07/Aug/2017 19:12:51] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:12:53] "GET /admin/catalog/product/ HTTP/1.1" 200 6279
+[07/Aug/2017 19:12:57] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:13:03] "GET /admin/catalog/product/9/change/ HTTP/1.1" 200 5101
+[07/Aug/2017 19:13:03] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:13:07] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:13:09] "GET /admin/catalog/product/ HTTP/1.1" 200 6279
+[07/Aug/2017 19:13:09] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:13:18] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:13:45] "GET /products/ HTTP/1.1" 200 6595
+[07/Aug/2017 19:14:04] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4805
+[07/Aug/2017 19:14:04] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:14:43] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:14:47] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4805
+[07/Aug/2017 19:14:47] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:14:49] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:14:52] "GET /admin/catalog/product/10/change/ HTTP/1.1" 200 5068
+[07/Aug/2017 19:14:52] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:14:56] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:14:57] "GET /admin/catalog/product/8/change/ HTTP/1.1" 200 5092
+[07/Aug/2017 19:14:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:15:01] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:15:03] "GET /admin/catalog/product/9/change/ HTTP/1.1" 200 5101
+[07/Aug/2017 19:15:03] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:15:04] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:18:53] "GET /admin/auth/user/add/ HTTP/1.1" 200 5501
+[07/Aug/2017 19:18:53] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:18:55] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:18:57] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4805
+[07/Aug/2017 19:18:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:18:58] "GET /admin/ HTTP/1.1" 200 4657
+[07/Aug/2017 19:19:00] "GET /admin/catalog/product/ HTTP/1.1" 200 6279
+[07/Aug/2017 19:19:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[07/Aug/2017 19:19:02] "GET /admin/ HTTP/1.1" 200 4657
+Traceback (most recent call last):
+  File "C:\Users\DanielCarol\drf-tutorial\drftutorial\manage.py", line 22, in <module>
+    execute_from_command_line(sys.argv)
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 363, in execute_from_command_line
+    utility.execute()
+  File "C:\Python27\lib\site-packages\django\core\management\__init__.py", line 317, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Python27\lib\site-packages\django\utils\autoreload.py", line 227, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\__init__.py", line 18, in setup
+    from django.urls import set_script_prefix
+  File "C:\Python27\lib\site-packages\django\urls\__init__.py", line 1, in <module>
+    from .base import (
+  File "C:\Python27\lib\site-packages\django\urls\base.py", line 11, in <module>
+    from .exceptions import NoReverseMatch, Resolver404
+  File "C:\Python27\lib\site-packages\django\urls\exceptions.py", line 3, in <module>
+    from django.http import Http404
+  File "C:\Python27\lib\site-packages\django\http\__init__.py", line 5, in <module>
+    from django.http.response import (
+  File "C:\Python27\lib\site-packages\django\http\response.py", line 21, in <module>
+    from django.utils.six.moves.http_client import responses
+  File "C:\Python27\lib\site-packages\django\utils\six.py", line 203, in load_module
+    mod = mod._resolve()
+  File "C:\Python27\lib\site-packages\django\utils\six.py", line 115, in _resolve
+    return _import_module(self.mod)
+  File "C:\Python27\lib\site-packages\django\utils\six.py", line 82, in _import_module
+    __import__(name)
+  File "C:\Python27\lib\httplib.py", line 67, in <module>
+    """
+KeyboardInterrupt
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 19:22:44
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Aug/2017 19:23:12] "GET /admin/logout/ HTTP/1.1" 200 1036
+[07/Aug/2017 19:23:12] "GET /admin/ HTTP/1.1" 200 4730
+Traceback (most recent call last):
+  File "C:\Python27\lib\wsgiref\handlers.py", line 86, in run
+    self.finish_response()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 128, in finish_response
+    self.write(data)
+  File "C:\Python27\lib\wsgiref\handlers.py", line 212, in write
+    self.send_headers()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 270, in send_headers
+    self.send_preamble()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 194, in send_preamble
+    'Date: %s\r\n' % format_date_time(time.time())
+  File "C:\Python27\lib\socket.py", line 328, in write
+[07/Aug/2017 19:23:12] "GET /products/ HTTP/1.1" 200 6561
+    self.flush()
+  File "C:\Python27\lib\socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 10053] Uma conexÒo estabelecida foi anulada pelo software no computador host
+[07/Aug/2017 19:23:12] "GET /admin/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 55273)
+Traceback (most recent call last):
+  File "C:\Python27\lib\SocketServer.py", line 596, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python27\lib\SocketServer.py", line 331, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python27\lib\SocketServer.py", line 654, in __init__
+    self.finish()
+  File "C:\Python27\lib\SocketServer.py", line 713, in finish
+    self.wfile.close()
+  File "C:\Python27\lib\socket.py", line 283, in close
+    self.flush()
+  File "C:\Python27\lib\socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 10053] Uma conexÒo estabelecida foi anulada pelo software no computador host
+----------------------------------------
+[07/Aug/2017 19:23:27] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2017 19:23:27] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1674
+[07/Aug/2017 19:23:29] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[07/Aug/2017 19:23:29] "GET /admin/ HTTP/1.1" 200 4730
+[07/Aug/2017 19:23:31] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4875
+[07/Aug/2017 19:23:32] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:23:33] "GET /admin/ HTTP/1.1" 200 4730
+[07/Aug/2017 19:23:37] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4875
+[07/Aug/2017 19:23:37] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:23:46] "POST /admin/catalog/product/add/ HTTP/1.1" 302 0
+[07/Aug/2017 19:23:46] "GET /admin/catalog/product/ HTTP/1.1" 200 6782
+[07/Aug/2017 19:23:46] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:23:48] "GET /admin/catalog/product/11/change/ HTTP/1.1" 200 5127
+[07/Aug/2017 19:23:48] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:23:51] "GET /admin/catalog/product/ HTTP/1.1" 200 6588
+[07/Aug/2017 19:25:27] "GET /admin/catalog/product/ HTTP/1.1" 200 6588
+[07/Aug/2017 19:25:27] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:25:35] "POST /admin/catalog/product/ HTTP/1.1" 200 3220
+[07/Aug/2017 19:25:35] "GET /static/admin/js/cancel.js HTTP/1.1" 200 204
+[07/Aug/2017 19:25:39] "POST /admin/catalog/product/ HTTP/1.1" 302 0
+[07/Aug/2017 19:25:39] "GET /admin/catalog/product/ HTTP/1.1" 200 6478
+[07/Aug/2017 19:25:39] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 19:31:58
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 19:33:07
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 19:35:11
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Aug/2017 19:39:36] "GET /products/ HTTP/1.1" 200 6593
+[07/Aug/2017 19:39:36] "GET /products/ HTTP/1.1" 200 6593
+Traceback (most recent call last):
+  File "C:\Python27\lib\wsgiref\handlers.py", line 86, in run
+    self.finish_response()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 128, in finish_response
+    self.write(data)
+  File "C:\Python27\lib\wsgiref\handlers.py", line 212, in write
+    self.send_headers()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 270, in send_headers
+    self.send_preamble()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 194, in send_preamble
+    'Date: %s\r\n' % format_date_time(time.time())
+  File "C:\Python27\lib\socket.py", line 328, in write
+    self.flush()
+  File "C:\Python27\lib\socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 10053] Uma conexÒo estabelecida foi anulada pelo software no computador host
+[07/Aug/2017 19:39:36] "GET /products/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56520)
+Traceback (most recent call last):
+  File "C:\Python27\lib\SocketServer.py", line 596, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python27\lib\SocketServer.py", line 331, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python27\lib\SocketServer.py", line 654, in __init__
+    self.finish()
+  File "C:\Python27\lib\SocketServer.py", line 713, in finish
+    self.wfile.close()
+  File "C:\Python27\lib\socket.py", line 283, in close
+    self.flush()
+  File "C:\Python27\lib\socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 10053] Uma conexÒo estabelecida foi anulada pelo software no computador host
+----------------------------------------
+[07/Aug/2017 19:39:46] "GET /admin/catalog/product/ HTTP/1.1" 200 6293
+[07/Aug/2017 19:39:46] "GET /admin/catalog/product/ HTTP/1.1" 200 6293
+Traceback (most recent call last):
+  File "C:\Python27\lib\wsgiref\handlers.py", line 86, in run
+    self.finish_response()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 128, in finish_response
+    self.write(data)
+  File "C:\Python27\lib\wsgiref\handlers.py", line 212, in write
+    self.send_headers()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 270, in send_headers
+    self.send_preamble()
+  File "C:\Python27\lib\wsgiref\handlers.py", line 194, in send_preamble
+    'Date: %s\r\n' % format_date_time(time.time())
+  File "C:\Python27\lib\socket.py", line 328, in write
+    self.flush()
+  File "C:\Python27\lib\socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 10053] Uma conexÒo estabelecida foi anulada pelo software no computador host
+[07/Aug/2017 19:39:46] "GET /admin/catalog/product/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 56487)
+Traceback (most recent call last):
+  File "C:\Python27\lib\SocketServer.py", line 596, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python27\lib\SocketServer.py", line 331, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python27\lib\SocketServer.py", line 654, in __init__
+    self.finish()
+  File "C:\Python27\lib\SocketServer.py", line 713, in finish
+    self.wfile.close()
+  File "C:\Python27\lib\socket.py", line 283, in close
+    self.flush()
+  File "C:\Python27\lib\socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 10053] Uma conexÒo estabelecida foi anulada pelo software no computador host
+----------------------------------------
+[07/Aug/2017 19:39:46] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:41:18] "GET /admin/catalog/product/11/change/ HTTP/1.1" 200 5116
+[07/Aug/2017 19:41:18] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:41:22] "POST /admin/catalog/product/11/change/ HTTP/1.1" 302 0
+[07/Aug/2017 19:41:22] "GET /admin/catalog/product/ HTTP/1.1" 200 6474
+[07/Aug/2017 19:41:22] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:41:24] "GET /admin/catalog/product/9/change/ HTTP/1.1" 200 5153
+[07/Aug/2017 19:41:24] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:41:27] "POST /admin/catalog/product/9/change/ HTTP/1.1" 302 0
+[07/Aug/2017 19:41:27] "GET /admin/catalog/product/ HTTP/1.1" 200 6475
+[07/Aug/2017 19:41:27] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:41:46] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4875
+[07/Aug/2017 19:41:46] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+Internal Server Error: /admin/catalog/product/add/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 1508, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 1452, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 724, in log_addition
+    object_repr=force_text(object),
+  File "C:\Python27\lib\site-packages\django\utils\encoding.py", line 80, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xd3' in position 0: ordinal not in range(128)
+[07/Aug/2017 19:42:21] "POST /admin/catalog/product/add/ HTTP/1.1" 500 124651
+[07/Aug/2017 19:42:29] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4875
+Internal Server Error: /admin/catalog/product/add/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 1508, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 1452, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "C:\Python27\lib\site-packages\django\contrib\admin\options.py", line 724, in log_addition
+    object_repr=force_text(object),
+  File "C:\Python27\lib\site-packages\django\utils\encoding.py", line 80, in force_text
+    s = six.text_type(bytes(s), encoding, errors)
+UnicodeEncodeError: 'ascii' codec can't encode character u'\xd3' in position 0: ordinal not in range(128)
+[07/Aug/2017 19:42:34] "POST /admin/catalog/product/add/ HTTP/1.1" 500 124651
+[07/Aug/2017 19:42:38] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4875
+[07/Aug/2017 19:42:41] "GET /admin/ HTTP/1.1" 200 5858
+[07/Aug/2017 19:42:41] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[07/Aug/2017 19:42:43] "GET /admin/logout/ HTTP/1.1" 200 1036
+
+C:\Users\DanielCarol\drf-tutorial\drftutorial
+(drf-tutorial) λ manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2017 - 19:43:54
+Django version 1.11.3, using settings 'drftutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[07/Aug/2017 19:52:27] "GET /admin/ HTTP/1.1" 302 0
+[07/Aug/2017 19:52:27] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1674
+[07/Aug/2017 19:52:41] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[07/Aug/2017 19:52:41] "GET /admin/ HTTP/1.1" 200 5858
+[07/Aug/2017 19:52:51] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4875
+[07/Aug/2017 19:52:51] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 19:53:04] "POST /admin/catalog/product/add/ HTTP/1.1" 302 0
+[07/Aug/2017 19:53:04] "GET /admin/catalog/product/ HTTP/1.1" 200 6698
+[07/Aug/2017 19:53:04] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 20:20:48] "GET /admin/catalog/product/12/change/ HTTP/1.1" 200 5116
+[07/Aug/2017 20:20:48] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 20:20:50] "GET /admin/catalog/product/ HTTP/1.1" 200 6515
+[07/Aug/2017 20:21:56] "GET /admin/ HTTP/1.1" 200 6144
+[07/Aug/2017 20:22:11] "GET /admin/catalog/product/add/ HTTP/1.1" 200 4875
+[07/Aug/2017 20:22:11] "GET /admin/jsi18n/ HTTP/1.1" 200 7322
+[07/Aug/2017 20:22:15] "GET /admin/ HTTP/1.1" 200 6144
+[07/Aug/2017 20:22:37] "GET /products/ HTTP/1.1" 200 6743
+[07/Aug/2017 20:22:40] "OPTIONS /products/ HTTP/1.1" 200 5224
+[07/Aug/2017 20:22:41] "OPTIONS /products/ HTTP/1.1" 200 5224
+[07/Aug/2017 20:22:41] "GET /products/ HTTP/1.1" 200 6743
+[07/Aug/2017 20:22:42] "GET /products/ HTTP/1.1" 200 6743
+[07/Aug/2017 20:22:45] "GET /products/?format=api HTTP/1.1" 200 6787
+[07/Aug/2017 20:22:50] "GET /products/?format=json HTTP/1.1" 200 783
